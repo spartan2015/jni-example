@@ -14,6 +14,45 @@ extern "C" {
  */
 JNIEXPORT jchar JNICALL Java_com_spartan2015_ExampleJni_hello
         (JNIEnv *, jclass);
+/*
+ * Class:     com_spartan2015_ExampleJni
+ * Method:    get
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_spartan2015_ExampleJni_get
+        (JNIEnv *, jclass, jstring);
+
+/*
+ * Class:     com_spartan2015_ExampleJni
+ * Method:    sum
+ * Signature: ([I)I
+ */
+JNIEXPORT jint JNICALL Java_com_spartan2015_ExampleJni_sum
+        (JNIEnv *env, jclass, jintArray jarray);
+
+/*
+ * Class:     com_spartan2015_ExampleJni
+ * Method:    print
+ * Signature: ([Ljava/lang/String;)I
+ */
+JNIEXPORT void JNICALL Java_com_spartan2015_ExampleJni_print
+        (JNIEnv *, jclass, jobjectArray);
+
+/*
+ * Class:     com_spartan2015_ExampleJni
+ * Method:    initIntArray
+ * Signature: (I)[[I
+ */
+JNIEXPORT jobjectArray JNICALL Java_com_spartan2015_ExampleJni_initIntArray
+        (JNIEnv *, jclass, jint);
+
+/*
+ * Class:     com_spartan2015_ExampleJni
+ * Method:    accessField
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_spartan2015_ExampleJni_accessField
+        (JNIEnv *, jobject, jstring);
 
 #ifdef __cplusplus
 }
